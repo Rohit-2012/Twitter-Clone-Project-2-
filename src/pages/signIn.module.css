@@ -17,13 +17,10 @@
 .field {
   margin: 2rem;
 }
-
-
-
-
-@media only screen and ( max-width:1000px) {
-    .field{
-        flex-direction: column;
-    }
-    
+.error{
+    color: red;
 }
+
+
+
+
