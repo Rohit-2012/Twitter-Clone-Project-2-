@@ -1,0 +1,25 @@
+.main {
+    background-color: azure;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgb(195, 219, 209);
+   
+    width: 30vw;
+    margin: auto;
+    padding: 2rem;
+    min-height: 50vh;
+    border-radius: 1em;
+}
+
+.field {
+  margin: 2rem;
+}
+.error{
+    color: red;
+}
+
+
+

@@ -1,0 +1,16 @@
+export const dateArray =  Array(31).fill(1).map((ele,index)=> ele+index)
+export const monthArray = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'Jun',
+    'July',
+    'Auguest',
+    'September',
+    'October',
+    'November',
+    'December'
+]
+export const yearArray = Array(121).fill(2023).map((year,index) => year - index)
