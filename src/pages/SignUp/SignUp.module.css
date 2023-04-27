@@ -27,4 +27,9 @@
 
 .toggle{
     color: rgb(12, 145, 185);
+    margin-top: 0;
+}
+.toggle:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }

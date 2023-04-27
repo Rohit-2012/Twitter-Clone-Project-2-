@@ -25,7 +25,7 @@ const SignUp = ()=>{
         setMonth("")
         setDate("")
         setYear("")
-        localStorage.setItem("UserDetail", JSON.stringify(info))
+        localStorage.setItem("UserDetail", JSON.stringify([...info, data]))
     }
 
     const handleToggle = ()=>{
