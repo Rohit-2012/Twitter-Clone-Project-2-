@@ -77,6 +77,8 @@ export default function SignIn() {
                 }
             } else {
                 setFound(false)
+                setEmailError(true)
+                setPasswordError(true)
                 setLoginMail('')
                 setLoginPassword('')
 
@@ -101,6 +103,7 @@ export default function SignIn() {
                     <TextField label="Password" variant="outlined"
                         onChange={(event) => setLoginPassword(event.target.value)}
                         value={loginPassword}
+                        type='password'
                     />
                     {
                         passwordError ? '' : <p className={styles.error}>Please enter the password</p>
@@ -113,7 +116,7 @@ export default function SignIn() {
                 {
                     found ? '' : <p className={styles.error}>User details not found please <Button onClick={() => navigate('/signUp')}>Register</Button></p>
                 }
-                <p>Don't have an account? <Button onClick={() => navigate('/signUpn')}>Sign up</Button> </p>
+                <p>Don't have an account? <Button onClick={() => navigate('/signUp')}>Sign up</Button> </p>
 
             </center>
         </div>
