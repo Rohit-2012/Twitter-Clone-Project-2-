@@ -3,7 +3,7 @@ import { useRecoilValue, useRecoilState } from "recoil";
 import SigninCss from "./Signin.module.css";
 import { Link } from "react-router-dom";
 import { showHome,userData } from "../LocalStorage/LocalStorage";
-import Home from "../Home/Home";
+import Home from "../pages/Home/Home";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import TwitterIcon from '@mui/icons-material/Twitter';

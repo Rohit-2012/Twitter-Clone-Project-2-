@@ -1,0 +1,84 @@
+.mainDiv{
+    border: 1px solid lightgrey;
+    width: 25rem;
+  display: flex;
+  flex-direction: column;
+ justify-content: space-around;
+  
+
+}
+.btnDiv{
+ 
+  height: 100%; 
+  margin-left: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+.btn1{
+    width: 15rem;
+    height: 3rem;
+    border-radius: 25px;
+    background-color:   #00acee;
+    border: white;
+    color: white;
+    font-size: larger;
+}
+.btnI{
+    width: 15rem;
+    height: 3rem;
+    border-radius: 25px;
+    font-size: larger;
+    border: white;  
+    margin-bottom: 2rem;
+}
+.btnI:hover{
+cursor: pointer;
+background-color:lightgray;
+}
+.btn1:hover{
+    cursor: pointer;
+    background-color: rgb(69, 199, 206);
+    
+    }
+.icons{
+  background-color: white;
+  border: 2px solid white;  
+  border-radius: 25px;
+  /* font-size:large; */
+ height: 3rem;
+ /* color: #0F1419; */
+ font-size: 20px;
+}
+.icons:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+
+.BigPhoto{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    padding: 1rem;
+}
+.ForTweet{
+    width: 35rem;
+    overflow-x: hidden;
+    height: 10rem;
+    border: 2px solid white;
+   
+}
+
+.btnTweet{
+
+    background-color:   #00acee;
+    border: white;
+    color: white;
+    border-radius: 20px;
+    font-size: larger;
+
+}
+
+
+

@@ -1,0 +1,23 @@
+.homeDiv{
+    /* border: 2px solid black; */
+    display:flex;
+    flex-direction: row;
+    /* position: relative; */
+    height: 44.5rem;
+    position: sticky;
+}
+
+.leftDiv{
+display: flex;
+flex-direction: row;
+position: sticky;
+}
+.midDiv{
+    display: flex;
+    flex-direction: row;
+}
+.rrightDiv{
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+}
