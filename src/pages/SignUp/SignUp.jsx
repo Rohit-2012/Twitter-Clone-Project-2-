@@ -16,8 +16,8 @@ const styles = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 650,
-  height: 650,
+  width: 670,
+  height: 670,
   bgcolor: 'background.paper',
   borderRadius: 6,
   boxShadow: 24,
@@ -66,9 +66,9 @@ return(
         <Box sx={styles}>
         <form onSubmit={handleNext} className={style.formBox}>
             <h1>Create your account</h1>
-        <TextField id="outlined-basic" label="Name" variant="outlined" sx={{background: 'white', width:'80%', height:'4rem'}} value={name} onChange={(e)=>setName(e.target.value)}/>
+        <TextField id="outlined-basic" label="Name" variant="outlined" sx={{background: 'white', width:'80%'}} value={name} onChange={(e)=>setName(e.target.value)}/>
         
-        {toggleEmail?(<TextField id="outlined-basic" label="Email" variant="outlined" sx={{background: 'white', width:'75%'}} value={email} onChange={(e)=>setEmail(e.target.value)} />):(<TextField id="outlined-basic" label="Phone" variant="outlined" sx={{background: 'white', width:'75%'}} value={phone} onChange={(e)=>setPhone(e.target.value)}/>)}
+        {toggleEmail?(<TextField id="outlined-basic" label="Email" variant="outlined" sx={{background: 'white', width:'80%'}} value={email} onChange={(e)=>setEmail(e.target.value)} />):(<TextField id="outlined-basic" label="Phone" variant="outlined" sx={{background: 'white', width:'80%'}} value={phone} onChange={(e)=>setPhone(e.target.value)}/>)}
         
         <span className={style.toggle} onClick={handleToggle}>Use{toggleEmail?' phone':' email'} instead</span>
 
