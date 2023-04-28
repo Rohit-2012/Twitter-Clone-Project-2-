@@ -3,10 +3,15 @@ import { useNavigate } from 'react-router-dom'
 import styles from './SignIn.module.css'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
+import Dialog from "@mui/material/Dialog";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 
 export default function SignIn() {
-
+    const [open, setOpen] = React.useState(true);
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
     const [emailError, setEmailError] = useState(true)
     const [loginMail, setLoginMail] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
@@ -85,9 +90,13 @@ export default function SignIn() {
     }
 
     return (
+        <Dialog
 
-        <div className={styles.main}>
-            <center className={styles.container}>
+      fullScreen={fullScreen}
+      open={open}
+      aria-labelledby="responsive-dialog-title"
+    >
+            <div className={styles.maincontainer}>
                 <h1>Sign in to Twitter</h1>
                 <div className={styles.field}>
                     <TextField label="Email" variant="outlined"
@@ -114,10 +123,8 @@ export default function SignIn() {
                     found ? '' : <p className={styles.error}>User details not found please <Button onClick={() => navigate('/signUp')}>Register</Button></p>
                 }
                 <p>Don't have an account? <Button onClick={() => navigate('/signUp')}>Sign up</Button> </p>
-
-            </center>
-        </div>
-
+                </div>
+        </Dialog>
 
     )
 

@@ -21,5 +21,11 @@
     color: red;
 }
 
-
+.maincontainer{
+    width:35rem;
+    height:35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
