@@ -3,10 +3,27 @@ import Button from '@mui/material/Button';
 import Dialog from "@mui/material/Dialog";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import React, { useState } from "react"
+import { useState } from "react"
 import {yearArray, monthArray, dateArray} from '../../utils/constants'
 import style from "./SignUp.module.css";
 
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+
+const styles = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 650,
+  height: 650,
+  bgcolor: 'background.paper',
+  borderRadius: 6,
+  boxShadow: 24,
+  p: 4,
+  outline: 0
+};
 
 const SignUp = ()=>{
     const [open, setOpen] = React.useState(true);
@@ -39,17 +56,17 @@ const SignUp = ()=>{
     }
 
 return(
-  <Dialog
-
-      fullScreen={fullScreen}
-      open={open}
-      aria-labelledby="responsive-dialog-title"
-    >
-      <div className={style.maincontainer}>
-
-         <form onSubmit={handleNext} className={style.formBox}>
+  <>
+   <div>
+      <Modal
+        open={open}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={styles}>
+        <form onSubmit={handleNext} className={style.formBox}>
             <h1>Create your account</h1>
-        <TextField id="outlined-basic" label="Name" variant="outlined" sx={{background: 'white', width:'75%'}} value={name} onChange={(e)=>setName(e.target.value)}/>
+        <TextField id="outlined-basic" label="Name" variant="outlined" sx={{background: 'white', width:'80%', height:'4rem'}} value={name} onChange={(e)=>setName(e.target.value)}/>
         
         {toggleEmail?(<TextField id="outlined-basic" label="Email" variant="outlined" sx={{background: 'white', width:'75%'}} value={email} onChange={(e)=>setEmail(e.target.value)} />):(<TextField id="outlined-basic" label="Phone" variant="outlined" sx={{background: 'white', width:'75%'}} value={phone} onChange={(e)=>setPhone(e.target.value)}/>)}
         
@@ -79,10 +96,12 @@ return(
           </span>
         <Button variant="contained" type="submit" size="large" sx={{width:'27rem', height:'3.5rem', backgroundColor:'gray', borderRadius:'5rem', fontWeight:'bold'}}>Next</Button>
     </form>
-      </div>
-    
-    </Dialog>
-   
+        </Box>
+      </Modal>
+    </div>
+  
+  
+   </>
 )
 }
 

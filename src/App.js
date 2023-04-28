@@ -9,7 +9,8 @@ function App() {
   return (
     <div className="App">
       <Routes>
-      <Route path="/" element={<Protected Component = {Home} />} />
+      {/* <Route path="/" element={<Protected Component = {Home} />} /> */}
+      <Route path="/" element={<Home />} />
       <Route path="/signUp" element={<SignUp />} />
       <Route path="/signIn" element={<SignIn />} />
       <Route path="/*" element={<h1>404: Page Not found</h1>} />
