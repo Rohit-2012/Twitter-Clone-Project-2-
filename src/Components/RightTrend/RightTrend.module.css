@@ -1,0 +1,62 @@
+.parent{
+    display:flex;
+    flex-direction: column; 
+    
+}
+.trendbtn{
+    display: flex;
+    align-items: center;
+    text-align:left;
+    justify-content:space-between;
+    width:23rem;
+    height:5rem;
+    border: none;
+     font-size: medium;  
+}
+.trendbtn:hover{
+    background-color: gainsboro;
+}
+.mainParent{
+    margin-left:2rem;
+    width:23rem;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 25px;
+    font-size: medium; 
+margin-top: -0.11rem;
+
+}
+.datadiv{
+    display: flex;
+    flex-direction: column;
+ margin-left: 0.7rem;
+}
+.trends{
+    font-size:12px;
+    font-weight:600; 
+    color:#536471;
+}
+.Hash{
+    font-size: 15px;
+    color:#0F1419;
+    font-weight: 700;
+
+}
+.more{
+    color: #536471;
+    margin-right: 0.5rem;
+}
+.more:hover{
+    color: #63baf5;
+ background-color:rgb(207, 226, 230) ;
+    border-radius: 100%;
+}
+.Show{
+    /* margin-left:1rem; */
+     padding:1rem;
+    color:#1D9BF0 ;
+    border-radius:0px 0px 25px 25px;
+}
+.Show:hover{
+    background-color: gainsboro;  
+}

@@ -13,17 +13,17 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 
 
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
-
+import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import { useState } from "react";
-// import PopOver from "../../Atom/PopOver/PopOver";
+ import PopOver from "../../Library/PopOver/PopOver";
 // import { tweetDataAtom } from "../../Recoil/atom";
 import { useRecoilState } from "recoil";
 
 const arrs = [
-  { icon: <HomeIcon style={{ fontSize: "28px" }} />, text: "Home" },
+  { icon: <Link to={"/Home"}><HomeIcon style={{ fontSize: "28px" }} /></Link>, text: "Home" },
   { icon: <TagSharpIcon style={{ fontSize: "28px" }} />, text: "Explore" },
   {
     icon: <NotificationsNoneOutlinedIcon style={{ fontSize: "28px" }} />,
@@ -118,7 +118,7 @@ function LeftSection() {
           </div>
           <br />
 
-          {/* <PopOver /> */}
+          <PopOver />
         </div>
       </div>
     </>

@@ -32,7 +32,7 @@ function Signin() {
   }
 
   return homeVis ? (
-    <Home />
+    <Home/>
   ) : (
     <div className={SigninCss.mainDiv}>
       <div className={SigninCss.Div}>
@@ -98,7 +98,7 @@ function Signin() {
             }}
             onClick={CheckDataFromLocal}
           >
-            Login
+           Login
           </Button>
         )}
         <br/>

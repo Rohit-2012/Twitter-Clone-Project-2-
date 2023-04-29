@@ -1,0 +1,40 @@
+.SearchBarDiv{
+    width: 23rem;
+    height: 3rem;
+    
+    margin-left: 1.5rem;
+    margin-top: 0.3rem;
+    border-radius: 25px;
+    background-color:#EFF3F4;
+    border:2px solid white;
+    display: flex;
+    align-items: center;
+    /* position:  relative; */
+
+}
+.SearchBarDiv:hover{
+    border: 1px solid #00acee;
+}
+.SearchBar{
+    width: 17rem;
+    height: 2rem;
+    background-color:#EFF3F4;
+
+  border: none; 
+  outline: none;
+}
+::-webkit-input-placeholder {
+  
+    font-size: larger;
+    margin-left: -2rem ;
+}
+
+ 
+ 
+.SearchIcon{
+margin-top: 0.3rem;
+margin-left: 3rem;
+width: 10rem;
+
+}
+

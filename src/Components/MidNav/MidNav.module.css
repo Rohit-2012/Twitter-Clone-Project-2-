@@ -1,0 +1,34 @@
+.NavDiv{
+    display: flex;
+    border: 1px solid lightgray;
+    position: sticky;
+ height: 10rem;
+
+
+
+   
+}
+h2{
+    height: 5rem;
+   
+    
+}
+.Btns{
+   width: 18.4rem; 
+   height: 5rem;
+   background-color: white;
+   border: none;
+   font-weight: 700;
+   color: rgb(83, 100, 113);
+   font-size: 15px;
+}
+.Btns:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.Btns:focus {     
+ color: black; 
+
+
+}
