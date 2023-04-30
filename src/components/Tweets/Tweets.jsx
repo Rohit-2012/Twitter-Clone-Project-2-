@@ -1,5 +1,6 @@
 import { AiFillHeart, AiOutlineHeart, AiOutlineRetweet } from "react-icons/ai";
 import { FaComment } from "react-icons/fa";
+
 export function FeedCard(props) {
     const tweet = props.tweet;
     return (

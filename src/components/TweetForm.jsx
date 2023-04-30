@@ -31,7 +31,7 @@ export function TweetForm() {
       setTweet({
         ...tweet,
         [event.target.name]: event.target.value,
-        image: `https://picsum.photos/1000/500?q=${Math.random()}`,
+        image: `https://picsum.photos/1000/500?q=${Date.now()}`,
       });
     };
   
