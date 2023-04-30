@@ -1,0 +1,40 @@
+.maindiv{
+    height: 25rem;
+    width: 43rem;
+    margin-top: 2rem;
+    border-bottom: 1.5px solid black;
+    display: flex;
+    flex-direction: column;
+    /*padding-top: 1rem;*/
+   align-items: center;
+   justify-content: center;
+   position: relative;
+ 
+    
+  }
+  .picdiv{
+    height: 5rem;
+    width: 10rem;
+    border: 6px;
+  }
+  .btns{
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background: white;
+ }
+ img{
+    height: 16rem;
+    
+ } 
+ 
+ .profile{
+    height: 5rem;
+    width: 5rem;
+    margin-top: -17rem;
+    margin-left: -30rem;
+    
+    position: absolute;
+ 
+ }
+ 

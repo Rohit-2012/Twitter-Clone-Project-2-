@@ -1,0 +1,18 @@
+.ScrolDiv{
+  
+
+
+    width:40%;
+    height:200PX;
+    FLOAT: left;
+    margin-left: -0.4rem;
+    padding: 1%;
+    overflow:scroll;
+    width: 36.5rem;
+    height: 100%;
+    }
+    .ScrolDiv::-webkit-scrollbar {
+        display: none;
+      }
+    
+    
