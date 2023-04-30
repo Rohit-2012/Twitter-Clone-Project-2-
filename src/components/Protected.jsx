@@ -8,7 +8,7 @@ function Protected({Component}){
     const navigate = useNavigate();
     
     useEffect(() => {
-        if (!isUserLoggedIn) {
+        if (isUserLoggedIn === false) {
           navigate("/signIn");
         }
       });
