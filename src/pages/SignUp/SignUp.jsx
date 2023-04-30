@@ -82,6 +82,7 @@ const SignUp = ()=>{
       alert('successfully registered')
       const data = { name: name, email: email,phone: phone,password:password, DOB: `${ month+ '/' + date+ '/' + year}`}
       setInfo([...info, data])
+      localStorage.setItem("UserDetail", JSON.stringify([...info, data]))
       setName("")
       setEmail("")
       setPhone('')
@@ -89,7 +90,6 @@ const SignUp = ()=>{
       setMonth("")
       setDate("")
       setYear("")
-      localStorage.setItem("UserDetail", JSON.stringify([...info, data]))
       setLoginStatus(true);
       navigate("/");
     }

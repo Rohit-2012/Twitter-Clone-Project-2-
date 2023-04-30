@@ -1,14 +1,18 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import { useRecoilValue } from "recoil"
+import { isLoginAtom } from "../Atom/Atom";
 
 function Protected({Component}){
-    const navigate = useNavigate()
-    useEffect(()=>{
-        let loggedIn = localStorage.getItem('loggedIn')
-        if(!loggedIn){
-            navigate('/signIn')
+    const isUserLoggedIn = useRecoilValue(isLoginAtom);
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        if (!isUserLoggedIn) {
+          navigate("/signIn");
         }
-    })
+      });
+
     return(
         <div>
             <Component/>
