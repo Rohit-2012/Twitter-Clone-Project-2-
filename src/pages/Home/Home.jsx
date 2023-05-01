@@ -5,6 +5,12 @@ import { isLoginAtom, usersAtom} from "../../Atom/Atom";
 import { Feeds } from "../../components/Feeds";
 import { TweetForm } from "../../components/TweetForm";
 
+import React from "react";
+import LeftSection from "../../Section/LeftSection/LeftSection";
+import Style from './Home.module.css'
+import RightSection from '../../Section/RightSection/RightSection'
+// import MidSection from "../../Section/MidSection/MidSection";
+
 export default function Home() {
 
   const isUserLoggedIn = useRecoilValue(isLoginAtom);
@@ -19,25 +25,28 @@ export default function Home() {
  
 
   return (
-    <div className="container">
-      <h1>Home Page</h1>
-      <hr />
+    <div className={Style.homeDiv}>
+      
+        <div className={Style.leftDiv}><LeftSection/></div>
 
-      <div>
-        <div className="row">
-          <div className="col-3 border">
-            <h1>SideBar</h1>
-          </div>
-          <div className="col-6 border">
+          <div className={Style.midDiv}>
+          <h2>Home</h2>
             <TweetForm />
             <hr />
             <Feeds />
           </div>
-          <div className="col-3 border">
-            <h1>RightBar</h1>
+          <div className={Style.rightDiv}>
+          <RightSection />
           </div>
-        </div>
-      </div>
+
+      {/* <div className={Style.homeDiv}>
+      
+      <div className={Style.leftDiv}><LeftSection/></div>
+      <div className={Style.midDiv}><MidSection /></div>
+      <div className={Style.rightDiv}><RightSection /></div>
+    
+    </div> */}
+
     </div>
   );
 }

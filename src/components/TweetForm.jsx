@@ -1,6 +1,10 @@
 import React from "react";
 import { useSetRecoilState } from "recoil";
 import { tweetsAtom } from "../Atom/Atom";
+import {GoFileMedia} from 'react-icons/go'
+import {RiFileGifFill} from 'react-icons/ri'
+import {BiPoll} from 'react-icons/bi'
+import {BsFillEmojiSmileFill} from 'react-icons/bs'
 
 export function TweetForm() {
     const setTweets = useSetRecoilState(tweetsAtom);
@@ -42,7 +46,11 @@ export function TweetForm() {
           name="content"
           className="form-control"
         ></textarea>
-        <button className="btn btn-success" type="submit">
+        <GoFileMedia style={{color:'blue', fontSize:'2rem'}}/>
+        <RiFileGifFill style={{color:'blue', fontSize:'2rem'}}/>
+        <BiPoll style={{color:'blue', fontSize:'2rem'}}/>
+        <BsFillEmojiSmileFill style={{color:'blue', fontSize:'2rem'}}/>
+        <button className="btn" type="submit">
           Tweet
         </button>
       </form>

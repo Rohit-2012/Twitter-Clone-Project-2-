@@ -5,4 +5,17 @@
 .App {
   text-align: center;
 }
+.hand{
+  cursor: pointer;
+}
+
+.btn{
+  border: 2px solid rgb(146, 207, 235);
+  background-color: rgb(146, 207, 235);
+  margin-left: 3rem;
+}
+.btn:hover{
+  color: white;
+  background-color: rgb(81, 118, 219);
+}
 
