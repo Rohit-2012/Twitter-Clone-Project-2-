@@ -10,8 +10,12 @@
 }
 
 .btn{
-  border: 2px solid rgb(146, 207, 235);
-  background-color: rgb(146, 207, 235);
+  border: 2px solid #00acee;
+  border-radius: 1.5rem;
+  background-color: #00acee;
+  width: 6rem;
+  color: white;
+  font-weight: bold;
   margin-left: 3rem;
 }
 .btn:hover{
@@ -19,3 +23,8 @@
   background-color: rgb(81, 118, 219);
 }
 
+.bottom{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}

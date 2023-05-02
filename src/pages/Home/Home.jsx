@@ -21,9 +21,8 @@ export default function Home() {
     if (!isUserLoggedIn) {
       navigate("/signIn");
     }
-  });
- 
-
+  }, []);
+console.log(isUserLoggedIn)
   return (
     <div className={Style.homeDiv}>
       

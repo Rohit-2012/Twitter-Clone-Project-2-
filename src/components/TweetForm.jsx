@@ -1,5 +1,5 @@
 import React from "react";
-import { useSetRecoilState } from "recoil";
+import { useSetRecoilState, useRecoilValue } from "recoil";
 import { tweetsAtom } from "../Atom/Atom";
 import {GoFileMedia} from 'react-icons/go'
 import {RiFileGifFill} from 'react-icons/ri'
@@ -7,6 +7,7 @@ import {BiPoll} from 'react-icons/bi'
 import {BsFillEmojiSmileFill} from 'react-icons/bs'
 
 export function TweetForm() {
+  const posts = useRecoilValue(tweetsAtom)
     const setTweets = useSetRecoilState(tweetsAtom);
     const [tweet, setTweet] = React.useState({
       id: Date.now(),
@@ -29,6 +30,7 @@ export function TweetForm() {
       setTweets((tweets) => {
         return [tweet, ...tweets];
       });
+      localStorage.setItem('Tweets', JSON.stringify([...posts, tweet]))
     };
   
     const handleChange = (event) => {
@@ -46,6 +48,7 @@ export function TweetForm() {
           name="content"
           className="form-control"
         ></textarea>
+        <div className="bottom">
         <GoFileMedia style={{color:'blue', fontSize:'2rem'}}/>
         <RiFileGifFill style={{color:'blue', fontSize:'2rem'}}/>
         <BiPoll style={{color:'blue', fontSize:'2rem'}}/>
@@ -53,6 +56,8 @@ export function TweetForm() {
         <button className="btn" type="submit">
           Tweet
         </button>
+        </div>
+        
       </form>
     );
   }

@@ -1,19 +1,19 @@
 .mainDiv{
     border: 1px solid lightgrey;
-    width: 25rem;
+    width: 25vw;
+    height: 100vh;
   display: flex;
   flex-direction: column;
  justify-content: space-around;
-  
-
+ align-items: center;
 }
 .btnDiv{
  
   height: 100%; 
-  margin-left: 8rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-around; 
+  align-items: center;
 }
 .btn1{
     width: 15rem;
@@ -23,6 +23,12 @@
     border: white;
     color: white;
     font-size: larger;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 .btnI{
     width: 15rem;

@@ -39,7 +39,6 @@ function RightTrend() {
     Hash:"#एक ही स्रोत रामचंद्रजी की जय",
     Tweets:"Trending with रामचंद्रजी की जय "
    }
-
   ] 
   )
 
@@ -56,8 +55,8 @@ function RightTrend() {
      
     </h2>
      {data
-    .map((data)=>
-     <div className={style.parent}>
+    .map((data,index)=>
+     <div className={style.parent} key={index}>
        <div className={style.trendbtn}>
       <div className={style.datadiv}>
         <div className={style.trends}>{data.Trends}</div>

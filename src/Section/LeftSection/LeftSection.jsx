@@ -10,6 +10,7 @@ import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlin
 import FeaturedPlayListOutlinedIcon from "@mui/icons-material/FeaturedPlayListOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { TweetForm } from "../../components/TweetForm";
 
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 import { Link } from "react-router-dom";
@@ -76,6 +77,7 @@ function LeftSection() {
             }}
           />
 
+          <div className={style.buttons}>
           {arrs.map((arr, index) => {
             return (
               <>
@@ -89,6 +91,7 @@ function LeftSection() {
               </>
             );
           })}
+          </div>
 
           <div>
             <Buttons
@@ -98,7 +101,7 @@ function LeftSection() {
             />
             <Dialog open={open} onClose={handleClose}>
               <img src={profile} alt="" className={style.BigPhoto} />
-
+{/* 
               <textarea
                 className={style.ForTweet}
                 placeholder="What is happening ?"
@@ -112,10 +115,10 @@ function LeftSection() {
                   Sign=" Tweet"
                   className={style.btnTweet}
                 />
-              </DialogActions>
+              </DialogActions> */}
+              <TweetForm/>
             </Dialog>
           </div>
-          <br />
 
           <PopOver />
         </div>

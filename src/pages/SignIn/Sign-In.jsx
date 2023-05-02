@@ -23,8 +23,8 @@ const styles = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 670,
-  height: 670,
+  width: 600,
+  height: 600,
   bgcolor: "background.paper",
   borderRadius: 6,
   boxShadow: 24,
@@ -56,8 +56,8 @@ const SignIn = () => {
 
   const regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
   useEffect(()=>{
-    setUser(JSON.parse(localStorage.getItem('UserDetail')))
-  })
+    setUser(JSON.parse(localStorage.getItem('UserDetail'))||[])
+  }, [])
   // console.log(user)
   function handleNext(e){
     e.preventDefault()
@@ -144,7 +144,7 @@ const SignIn = () => {
                       fontSize: "3rem",
                     }}
                   />
-                  <h1 style={{ fontSize: 45, margin: "2rem 0" }}>
+                  <h1 style={{ fontSize: 30, margin: "2rem 0" }}>
                     Sign in to Twitter
                   </h1>
                   <CustomButton
@@ -161,27 +161,27 @@ const SignIn = () => {
                   <br />
   
                   <div className={style.or}>
-                    <p className={style.line}>______________________</p>
+                    <p className={style.line}>___________________</p>
                     or
-                    <p className={style.line}>______________________</p>
+                    <p className={style.line}>___________________</p>
                   </div>
   
   
                   {stringError?
                   (<TextField error id="outlined-error-helper-text"
-                  variant="outlined" sx={{background: 'white', width:'22rem'}} value={string} onChange={(e)=>setString(e.target.value)}
+                  variant="outlined" sx={{background: 'white', width:'20rem'}} value={string} onChange={(e)=>setString(e.target.value)}
                     label="Phone, email or username"
                     helperText="Please enter a valid detail."
-                   InputProps={{style:{height:'4rem'}}}/>)
+                   InputProps={{style:{height:'3.5rem'}}}/>)
                   :
                   (<TextField
                     id="outlined-basic"
                     label="Phone, email or username"
                     variant="outlined"
-                    sx={{ background: "white", width: "22rem" }}
+                    sx={{ background: "white", width: "20rem" }}
                     value={string}
                     onChange={(e) => setString(e.target.value)}
-                    InputProps={{ style: { height: "4rem", fontSize: 20 } }}
+                    InputProps={{ style: { height: "3.5rem", fontSize: 20 } }}
                   />)}
   
                   <CustomButton

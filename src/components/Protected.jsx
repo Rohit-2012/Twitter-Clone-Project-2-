@@ -13,7 +13,7 @@ function Protected({Component}){
         }else{
           navigate('/')
         }
-      });
+      }, []);
 
     return(
         <div>

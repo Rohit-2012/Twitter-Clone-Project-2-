@@ -12,9 +12,7 @@ const[trend,set]=useState([])
 
 
 
-function Remove(){
-   
-}
+
     return (
         <PopupState variant="popover" popupId="demo-popup-popover">
             {(popupState) => (
@@ -35,7 +33,7 @@ function Remove(){
                             horizontal: 'center',
                         }}
                     >
-                        <Typography sx={{ p: 2 }} onClick={Remove}>Remove Tweet</Typography>
+                        <Typography sx={{ p: 2 }} >Remove Tweet</Typography>
                         <Typography sx={{ p: 2 }}>This trend is harmful </Typography>
                     </Popover>
                 </div>

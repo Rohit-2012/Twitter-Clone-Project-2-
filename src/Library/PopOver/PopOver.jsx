@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useEffect} from 'react'
 import Typography from '@mui/material/Typography';
 import Popover from '@mui/material/Popover';
 import  profile from '../../Assets/profile.png';
@@ -9,7 +9,9 @@ import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import { isLoginAtom} from '../../Atom/Atom';
 import {useRecoilState} from "recoil"
 import { useNavigate } from 'react-router-dom';
+
 const PopOver = () => {
+
     const tologin=useNavigate()
     const [loginStatus,setLoginStatus] = useRecoilState(isLoginAtom)
     function Loggedout(){
@@ -17,15 +19,16 @@ const PopOver = () => {
         setLoginStatus(false)
         tologin("/")
     }
-     
+
     return (
         <PopupState variant="popover" popupId="demo-popup-popover">
             {(popupState) => (
-                <div>
-                     
+                <div>                    
                      <button className={style.btn}  
                      {...bindTrigger(popupState)}>
-                       <img src={profile} alt="" className={style.profile} /> Satyadeep Raj<MoreHorizOutlinedIcon /></button>
+                       <img src={profile} alt="" className={style.profile} />
+                       User
+                        <MoreHorizOutlinedIcon /></button>
                           <Popover
                         {...bindPopover(popupState)}
                         anchorOrigin={{
@@ -37,7 +40,7 @@ const PopOver = () => {
                             horizontal: 'center',
                         }}
                     >
-                        <Typography sx={{ p: 2 }}>Add an existing account</Typography>
+                        <Typography sx={{ p: 2}}>Add an existing account</Typography>
                         <Typography sx={{ p: 2 }} onClick={Loggedout}>Log out </Typography>
                     </Popover>
                 </div>

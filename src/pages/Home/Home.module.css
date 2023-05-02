@@ -10,14 +10,27 @@
 .leftDiv{
 display: flex;
 flex-direction: row;
-position: sticky;
+/* position: fixed;
+left: 0;
+    top: 0; */
 }
 .midDiv{
     display: flex;
     flex-direction: column;
+    width: 55vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.midDiv::-webkit-scrollbar{
+    display: none;
 }
 .rightDiv{
     display: flex;
-    flex-direction: row;
-    position: sticky;
+    overflow-y: scroll;
+    /* position: fixed;
+    right: 0;
+    top: 0; */
+}
+.rightDiv::-webkit-scrollbar{
+    display: none;
 }

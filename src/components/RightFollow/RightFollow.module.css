@@ -1,10 +1,10 @@
 .mainParent{
-    margin-left:2rem;
+    margin-left:1rem;
     width:23rem;
     background-color: #EFF1F1;
     border-radius: 25px;
     /* border: 2px solid red; */
-    height: 26rem;
+    height: 28rem;
 }
 
 .wrapper{

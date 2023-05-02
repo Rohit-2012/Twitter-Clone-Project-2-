@@ -24,8 +24,8 @@ const styles = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 670,
-  height: 670,
+  width: 600,
+  height: 600,
   bgcolor: 'background.paper',
   borderRadius: 6,
   boxShadow: 24,
@@ -116,44 +116,40 @@ return(
        {createAC?
        (<form onSubmit={handleNext} className={style.formBox}>
             <h1 className={style.heading}>Create your account</h1>
-        <TextField id="outlined-basic" label="Name" variant="outlined" sx={{background: 'white', width:'35rem'}} value={name} onChange={(e)=>setName(e.target.value)} InputProps={{style:{height:'4rem', fontSize:20}}}/>
+        <TextField id="outlined-basic" label="Name" variant="outlined" sx={{background: 'white', width:'25rem'}} value={name} onChange={(e)=>setName(e.target.value)} InputProps={{style:{height:'3rem', fontSize:20}}}/>
         <br/>
         {toggleEmail?(!emailError?
-        (<TextField  id= "outlined-basic" label="Email" variant="outlined" sx={{background: 'white', width:'35rem'}} value={email} onChange={(e)=>setEmail(e.target.value)} InputProps={{style:{height:'4rem', fontSize:20}}}/>):(<TextField error id="outlined-error-helper-text"
-        variant="outlined" sx={{background: 'white', width:'35rem'}} value={email} onChange={(e)=>setEmail(e.target.value)}
+        (<TextField  id= "outlined-basic" label="Email" variant="outlined" sx={{background: 'white', width:'25rem'}} value={email} onChange={(e)=>setEmail(e.target.value)} InputProps={{style:{height:'3rem', fontSize:20}}}/>):(<TextField error id="outlined-error-helper-text"
+        variant="outlined" sx={{background: 'white', width:'25rem'}} value={email} onChange={(e)=>setEmail(e.target.value)}
           label="Email"
           helperText="Please enter a valid email."
-         InputProps={{style:{height:'4rem'}}}/>))
+         InputProps={{style:{height:'3rem'}}}/>))
         :
-        (<TextField id="outlined-basic" label="Phone" variant="outlined" sx={{background: 'white', width:'35rem'}} value={phone} onChange={(e)=>setPhone(e.target.value)} InputProps={{style:{height:'4rem', fontSize:20}}}/>)}
+        (<TextField id="outlined-basic" label="Phone" variant="outlined" sx={{background: 'white', width:'25rem'}} value={phone} onChange={(e)=>setPhone(e.target.value)} InputProps={{style:{height:'3rem', fontSize:20}}}/>)}
 
 <span className={style.toggle} onClick={handleToggle}>Use{toggleEmail?' phone':' email'} instead</span>
 
-{!passwordError? (<TextField id="outlined-basic" label="Password" variant="outlined" type="password" sx={{background: 'white', width:'35rem'}} value={password} onChange={(e)=>setPassword(e.target.value)} InputProps={{style:{height:'4rem', fontSize:20}}}/>)
+{!passwordError? (<TextField id="outlined-basic" label="Password" variant="outlined" type="password" sx={{background: 'white', width:'25rem'}} value={password} onChange={(e)=>setPassword(e.target.value)} InputProps={{style:{height:'3rem', fontSize:20}}}/>)
 :
-(<TextField error id="outlined-error-helper-text" label="Password" variant="outlined" type="password" sx={{background: 'white', width:'35rem'}} value={password} onChange={(e)=>setPassword(e.target.value)} helperText="Please enter a strong password." InputProps={{style:{height:'4rem', fontSize:20}}}/>)}
+(<TextField error id="outlined-error-helper-text" label="Password" variant="outlined" type="password" sx={{background: 'white', width:'25rem'}} value={password} onChange={(e)=>setPassword(e.target.value)} helperText="Please enter a strong password." InputProps={{style:{height:'3rem', fontSize:20}}}/>)}
 
-<div className={styles.dob}>
-  <h3>Date of birth</h3>
-<span>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</span>
-</div>
 
 
         <span className={style.date}>
          
-            <select id='gMonth2' style={{ width: '17rem', height: "3.5rem",margin:'1rem 0' }} value={month}  onChange={(e)=>setMonth(e.target.value)}>
+            <select id='gMonth2' style={{ width: '11rem', height: "3rem",margin:'1rem 0' }} value={month}  onChange={(e)=>setMonth(e.target.value)}>
               <option selected value=''>Month</option>
             {monthArray.map(ele=>(<option>{ele}</option>))}
           
             </select>
 
-            <select id='gMonth2' style={{ width: '8rem', height: '3.5rem',margin:'1rem 0' }} value={date} onChange={(e)=>setDate(e.target.value)}>
+            <select id='gMonth2' style={{ width: '5rem', height: '3rem',margin:'1rem 0' }} value={date} onChange={(e)=>setDate(e.target.value)}>
               <option value=''>Day</option>
              {dateArray.map(ele=>(<option>{ele}</option>))}
 
             </select>
 
-            <select id='gMonth2' style={{ width: '8rem', height: "3.5rem",margin:'1rem 0' }} value={year}
+            <select id='gMonth2' style={{ width: '7rem', height: "3rem",margin:'1rem 0' }} value={year}
             onChange={(e)=>setYear(e.target.value)} >
               <option value=''
               >Year</option>
@@ -171,7 +167,7 @@ return(
        <TwitterIcon
         sx={{ color:"rgb(29, 155, 240)",size:"bigger", fontSize:'3rem'}}
         />
-        <h1 style={{fontSize:45, margin:'2rem 0'}}>Join Twitter today</h1>
+        <h1 style={{fontSize:30, margin:'2rem 0'}}>Join Twitter today</h1>
         <CustomButton
                 buttonText="Sign in with Google"
                 customCss={style.btn1}
@@ -186,9 +182,9 @@ return(
               <br />
 
               <div className={style.or}>
-                <p className={style.line}>______________________</p>
+                <p className={style.line}>________________</p>
                 or
-                <p className={style.line}>______________________</p>
+                <p className={style.line}>________________</p>
               </div>
               
               <CustomButton
@@ -201,7 +197,7 @@ return(
                   and Privacy Policy, including Cookie Use.
                 </p>
                 <div className={style.txt2}>
-                Have an Account Already..? <Link to="/"> Log in</Link>
+                Have an Account Already..? <Link to="/signIn"> Log in</Link>
               </div>
        </>)}
        
