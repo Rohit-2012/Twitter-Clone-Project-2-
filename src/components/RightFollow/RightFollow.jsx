@@ -46,8 +46,8 @@ function RightFollow() {
   return (
     <div className={style.mainParent}>
     <h2>  Who to follow</h2>
-     {followContainer.map((data)=>
-     <div className={style.wrapper}>
+     {followContainer.map((data ,i)=>
+     <div className={style.wrapper} key={i}>
                   
                     <div className={style.img}>
                     <Avatar alt="Remy Sharp" src={data.src} />
