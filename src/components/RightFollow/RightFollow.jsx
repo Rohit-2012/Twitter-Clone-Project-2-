@@ -18,28 +18,28 @@ function RightFollow() {
           id: 1,
          
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjj_oz7crwHtUQj0jJuvLq-ILk5oikP_3FFL-mDJqk&s",
-          text: "virat",
+          text: "Satyadeep",
           text2: "virat@gmail.com",
         },
         {
           id: 2,
         
           src: "https://www.cricketsoccer.com/wp-content/uploads/2020/09/i.jpg",
-          text: "Rohit",
+          text: "Vinay",
           text2: "rohits@gmail.com",
         },
         {
           id: 3,
         
           src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLa_q7k5ZBQ590c5TlV-Fu7kO31Y20J1f4eA&usqp=CAU",
-          text: "Sachin",
+          text: "Santosh",
           text2: "sachin@gmail.com",
         },
         {
           id: 4,
    
           src: "https://play-lh.googleusercontent.com/jEwZGCi6DVMYWlJtVHuliR4Dve2eaqbC5NY73uDwCGBHD7l2fx2OxMih_1oHDQXX-Q=w240-h480-rw",
-          text: "Anuj bhati",
+          text: "Rohit",
           text2: "anujbhati@gmail.com",
         },
       ]);
